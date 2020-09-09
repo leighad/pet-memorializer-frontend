@@ -25,7 +25,17 @@ class PetInput extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
         this.props.addPet(this.state)
-
+        this.setState({
+            name: '', 
+            kind: '',
+            gender: '',
+            age: '',
+            born: '',
+            passed: '',
+            bio: '',
+            quote: '',
+            image: ''
+        })
     }
 
     render() {
