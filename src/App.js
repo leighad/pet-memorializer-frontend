@@ -1,15 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import PetsContainer from './containers/PetsContainer'
+
 // import './App.css';
 
 class App extends React.Component {
-  render() {
 
+  // componentDidMount() {
+  //   this.props.fetchPets()
+  // }
+
+  render() {
     return (
       <div className="App">
-        App
+        {/* App Component  */}
+        <PetsContainer />
       </div>
     );
   }
 }
 
-export default App;
+
+export default connect()(App);
