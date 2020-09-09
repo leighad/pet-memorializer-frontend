@@ -4,7 +4,7 @@ const Pets = (props) => {
 
     return (
         <div>
-            Pets
+            {props.pets.map(pet => <li key={pet.id}>{pet.name} the {pet.kind}</li>)}
         </div>
     )
 }
