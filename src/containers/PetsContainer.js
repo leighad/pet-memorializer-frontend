@@ -1,4 +1,6 @@
 import React from 'react' 
+import Pets from '../components/Pets'
+import PetInput from '../components/PetInput'
 
 class PetsContainer extends React.Component {
 
@@ -6,7 +8,8 @@ class PetsContainer extends React.Component {
 
         return (
             <div>
-                Pets Container
+                <PetInput />
+                <Pets />
             </div>
         )
     }
