@@ -14,8 +14,10 @@ class App extends React.Component {
     return (
       <div className="App">
         {/* App Component  */}
-        <h1>Pet Memorializer</h1>
-        <h3>a place to chronicle special memories of your pets</h3><hr/>
+        <div className="App-Header">
+          <h1>Pet Memorializer</h1>
+          <h2>a place to chronicle special memories of your pets</h2><hr/>
+        </div>
         <PetsContainer />
       </div>
     );
