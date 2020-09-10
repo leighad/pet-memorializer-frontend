@@ -1,6 +1,6 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
-import PetShow from './PetShow'
+import { Link } from 'react-router-dom'
+// import PetShow from './PetShow'
 
 const Pets = (props) => {
 
