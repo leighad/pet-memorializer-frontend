@@ -1,6 +1,6 @@
 import React from 'react' 
 import { connect } from 'react-redux'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { fetchPets } from '../actions/fetchPets'
 import PetInput from '../components/PetInput'
 import PetShow from '../components/PetShow'
@@ -16,9 +16,11 @@ class PetsContainer extends React.Component {
 
         return (
             <div>
-                <Route path='/pets/new' component={PetInput}/>
-                <Route path='/pets/:id' render={(routerProps) => <PetShow { ...routerProps } pets={this.props.pets} /> }/>
-                <Route exact path='/pets' render={(routerProps) => <Pets { ...routerProps } pets={this.props.pets} /> }/>
+                <Switch>
+                    <Route path='/pets/new' component={PetInput}/>
+                    <Route path='/pets/:id' render={(routerProps) => <PetShow { ...routerProps } pets={this.props.pets} /> }/>
+                    <Route path='/pets' render={(routerProps) => <Pets { ...routerProps } pets={this.props.pets} /> }/>
+                </Switch>
             </div>
         )
     }
