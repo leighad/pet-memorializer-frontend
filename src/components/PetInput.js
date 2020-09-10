@@ -41,7 +41,7 @@ class PetInput extends React.Component {
     render() {
         return (
             <div>
-            <h2>Please fill out pet details here: </h2><hr/>
+            <h2>Please fill out pet details here: </h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>Your pet's name: </label>
                     <input type='text' value={this.state.name} name='name' onChange={this.handleChange}/><br/><br/>
