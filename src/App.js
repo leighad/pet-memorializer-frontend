@@ -15,7 +15,7 @@ class App extends React.Component {
       <div className="App">
         {/* App Component  */}
         <h1>Pet Memorializer</h1>
-        <h3>a place to chronicle special memories of your pets</h3>
+        <h3>a place to chronicle special memories of your pets</h3><hr/>
         <PetsContainer />
       </div>
     );
