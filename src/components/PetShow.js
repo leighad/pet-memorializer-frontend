@@ -16,7 +16,7 @@ const PetShow = (props) => {
                 { pet ? `${pet.name} the ${pet.kind}` : 'There is no pet at this address, please try again.' } 
             </h2>
             <div>
-                <PetDetails pet={pet} /><br/>
+                {/* <PetDetails pet={pet} /><br/> */}
                 <MemoriesContainer pet={pet} />
             </div>
         </div>

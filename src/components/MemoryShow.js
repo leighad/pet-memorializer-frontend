@@ -1,15 +1,16 @@
 import React from 'react'
-import MemoriesContainer from '../containers/MemoriesContainer'
 
 const MemoryShow = (props) => {
+
+    let memory = props.memories[props.match.params.memory_id - 1]
 
     return (
         <div>
             <h3>
-                { props.memory && `${props.memory.title}` } { props.memory && `${props.memory.date}` }
+                { memory && `${memory.title}` } { memory && `${memory.date}` }
             </h3>
             <h4>
-                { props.memory && `${props.memory.description}` }
+                { memory && `${memory.description}` }
             </h4>
         </div>
     )
