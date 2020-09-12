@@ -6,6 +6,8 @@ import MemoriesContainer from '../containers/MemoriesContainer'
 const PetShow = (props) => {
 
     let pet = props.pets[props.match.params.id - 1]
+    // let pet = props.pets.filter(pet =>  pet.id == props.match.params.id)[0]
+    // may want to use this to match for id vs index
 
     return (
         <div>
