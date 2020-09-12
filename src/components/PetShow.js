@@ -11,10 +11,10 @@ const PetShow = (props) => {
 
     return (
         <div>
-            <h3>
+            <h2>
                 {/* {pet ? null : <Redirect to='/pets' />} */}
                 { pet ? `${pet.name} the ${pet.kind}` : 'There is no pet at this address, please try again.' } 
-            </h3>
+            </h2>
             <div>
                 <PetDetails pet={pet} /><br/>
                 <MemoriesContainer pet={pet} />
