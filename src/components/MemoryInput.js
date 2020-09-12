@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addMemory } from '../actions/addMemory'
 
 class MemoryInput extends React.Component {
 
@@ -8,14 +9,32 @@ class MemoryInput extends React.Component {
         date: '',
         description: '',
         image: '',
-        favorite: ''
+        favorite: 'no'
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value 
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.addMemory(this.state, this.props.pet.id)
+        this.setState({
+            title: '',
+            date: '',
+            description: '',
+            image: '',
+            favorite: 'no'
+        })
     }
 
     render() {
         return (
             <div>
                 <h3>Please fill out memory details here: </h3>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Title: </label>
                     <input type='text' name='title' value={this.state.title} onChange={this.handleChange}/><br/><br/>
                     <label>Date: </label>
@@ -38,4 +57,4 @@ class MemoryInput extends React.Component {
 }
 
 
-export default connect(null, )(MemoryInput);
+export default connect(null, { addMemory })(MemoryInput);
