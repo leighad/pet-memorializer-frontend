@@ -1,16 +1,15 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Memories = (props) => {
 
     return (
         <div>
-            List of Memories
-            {/* <h2>`${props.pets[pet.name]}'s memories`</h2>
-            {props.pets.memories.map(pet => 
-                <li key={pet.id}>
-                    <Link to={`/pets/${pet.id}`}>{pet.name}</Link>
-                </li> )} */}
+        <h4>Memories: </h4>
+            {props.memories && props.memories.map(memory => 
+                <li key={memory.id}>
+                    <Link to={`/pets/${memory.pet_id}/memories/${memory.id}`}>{memory.title}</Link>
+                </li> )}
         </div>
     )
 }
