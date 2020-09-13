@@ -7,13 +7,15 @@ import Memories from '../components/Memories'
 class MemoriesContainer extends React.Component {
 
     render() {
+        console.log('inside memories container', this.props.pet)
+
         return (
             <div>
             
                 <MemoryInput pet={this.props.pet}/><br/>
                 <Switch>
-                    {/* <MemoryShow memory={this.props.pet && this.props.pet.memory_id}/> */}
-                    <Route path='/pets/`${this.props.id}`/memories/:id' render={(routerProps) => <MemoryShow { ...routerProps } memories={this.props.memories} /> }/>
+                    {/* <MemoryShow memory={this.props.pet && this.props.memory_id}/> */}
+                    <Route path={'/pets/:petId/memories/:memoryId'} render={(routerProps) => <MemoryShow { ...routerProps } memories={this.props.pet.memories} /> }/>
                 </Switch>
                 <Memories memories={this.props.pet && this.props.pet.memories}/>
             </div>
@@ -22,11 +24,3 @@ class MemoriesContainer extends React.Component {
 }
 
 export default MemoriesContainer;
-
-// <Switch>
-// <Route path='/pets/new' component={PetInput}/>
-// <Route path='/pets/:id' render={(routerProps) => <PetShow { ...routerProps } pets={this.props.pets} /> }/>
-// <Route path='/pets' render={(routerProps) => <Pets { ...routerProps } pets={this.props.pets} /> }/>
-// </Switch>
-
-{/* <Route path='pets/:id/memories/:id' render={(routerProps) => <MemoryShow { ...routerProps } memories={this.props.memories} /> }/> */}
