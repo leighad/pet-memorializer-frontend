@@ -23,6 +23,23 @@ body {
   user-select: none;
 } */
 
+.link-menu {
+  /* text-align: center; */
+  display: inline;
+}
+
+.active {
+  color: maroon;
+}
+
+.centered {
+  text-align: center;
+}
+
+.body-main {
+  text-align: left;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
