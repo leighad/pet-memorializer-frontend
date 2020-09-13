@@ -1,13 +1,18 @@
 import React from 'react'
 
 const MemoryShow = (props) => {
+    console.log(props)
+    // debugger 
+    // let memory = props.memories[props.match.params.memoryId - 1]
+    let memory = props.memories[props.match.params.memoryId - 1]
+    // let memory = props.memories.filter(memory =>  memory.id == props.match.params.id)[0]
 
-    let memory = props.memories[props.match.params.memory_id - 1]
+
 
     return (
         <div>
             <h3>
-                { memory && `${memory.title}` } { memory && `${memory.date}` }
+                { memory && `${memory.title}` }
             </h3>
             <h4>
                 { memory && `${memory.description}` }
