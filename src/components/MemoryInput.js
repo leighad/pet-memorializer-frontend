@@ -35,14 +35,14 @@ class MemoryInput extends React.Component {
             <div>
                 <h3>Please fill out memory details here: </h3>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Title: </label>
+                    <label>Title (required): </label>
                     <input type='text' name='title' value={this.state.title} onChange={this.handleChange}/><br/><br/>
-                    <label>Date: </label>
-                    <input type='text' name='date' value={this.state.date} onChange={this.handleChange}/><br/><br/>
-                    <label>Description: </label>
+                    {/* <label>Date: </label>
+                    <input type='text' name='date' value={this.state.date} onChange={this.handleChange}/><br/><br/> */}
+                    <label>Description (required): </label>
                     <input type='text' name='description' value={this.state.description} onChange={this.handleChange}/><br/><br/>
-                    <label>Image: </label>
-                    <input type='text' name='image' value={this.state.image} onChange={this.handleChange}/><br/><br/>
+                    {/* <label>Image: </label>
+                    <input type='text' name='image' value={this.state.image} onChange={this.handleChange}/><br/><br/> */}
                     <label>Favorite? </label>
                     {/* <input type='text' name='favorite' value={this.state.favorite} onChange={this.handleChange}/><br/><br/> */}
                     <input type="checkbox" id="favoriteYes" name="favorite" value={this.state.favorite}/>
