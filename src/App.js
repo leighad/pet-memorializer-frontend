@@ -18,10 +18,11 @@ class App extends React.Component {
           <h1>Pet Memorializer</h1>
           <h2>a place to chronicle special memories of your pets</h2><hr/>
         </div>
-        <HomeShow />
-        {/* <div className='centered'>
-          <h3>~ this place was created to honor all animals who have made our lives better ~</h3>
-        </div> */}
+
+        <div>
+          <HomeShow />
+        </div>
+
         <div>
           <div className='link-menu'>
             <NavLink exact activeClassName='active' to='/'>Home</NavLink><br/><br/>
@@ -32,13 +33,13 @@ class App extends React.Component {
           {/* <Route path='/pets' component={Pets} /> */}
           {/* <Route path='/pets/new' component={PetInput} /> */}
         </div>
-
-        <PetsContainer />
-        {/* <MemoriesContainer /> */}
+        
+        <div>
+          <PetsContainer />
+        </div>
       </div>
     );
   }
 }
-
 
 export default connect()(App);
