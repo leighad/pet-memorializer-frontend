@@ -6,6 +6,10 @@ import MemoriesContainer from '../containers/MemoriesContainer'
 const PetShow = (props) => {
 
     let pet = props.pets[props.match.params.id - 1]
+    console.log('props pets', props.pets)
+    console.log('params are', props.match.params)
+    console.log('inside pet show', pet)
+
     // let pet = props.pets.filter(pet =>  pet.id == props.match.params.id)[0]
     // may want to use this to match for id vs index
 
@@ -16,7 +20,7 @@ const PetShow = (props) => {
                 { pet ? `${pet.name} the ${pet.kind}` : 'There is no pet at this address, please try again.' } 
             </h2>
             <div>
-                {/* <PetDetails pet={pet} /><br/> */}
+                <PetDetails pet={pet} /><br/>
                 <MemoriesContainer pet={pet} />
             </div>
         </div>
