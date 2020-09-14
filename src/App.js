@@ -26,8 +26,8 @@ class App extends React.Component {
         <div>
           <div className='link-menu'>
             <NavLink exact activeClassName='active' to='/'>Home</NavLink><br/><br/>
-            <NavLink activeClassName='active' to='/pets'>My Pets</NavLink><br/><br/>
-            <NavLink activeClassName='active' to='/pets/new'>Create A Pet</NavLink>
+            <NavLink exact activeClassName='active' to='/pets'>My Pets</NavLink><br/><br/>
+            <NavLink exact activeClassName='active' to='/pets/new'>Create A Pet</NavLink>
           </div>
           {/* <Route path='/' component={HomeShow} /> */}
           {/* <Route path='/pets' component={Pets} /> */}
