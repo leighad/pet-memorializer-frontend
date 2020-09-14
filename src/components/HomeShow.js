@@ -4,7 +4,7 @@ const HomeShow = () => {
 
         return (
             <div className='centered'>
-                <h3>~ this place was created to honor all animals who have made our lives better ~</h3>
+                <h3>~ this place was created to honor the animals who have made our lives better ~</h3>
             </div>
         )
 }
