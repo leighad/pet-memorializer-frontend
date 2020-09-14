@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import PetShow from './PetShow'
 
 const Pets = (props) => {
     return (
