@@ -11,12 +11,15 @@ class MemoriesContainer extends React.Component {
 
         return (
             <div>
-                <Memories memories={this.props.pet && this.props.pet.memories}/>
+                <div>
+                    <Memories memories={this.props.pet && this.props.pet.memories}/>
+                </div>
                 <Switch>
-                    {/* <MemoryShow memory={this.props.pet && this.props.memory_id}/> */}
                     <Route path={'/pets/:petId/memories/:memoryId'} render={(routerProps) => <MemoryShow { ...routerProps } memories={this.props.pet ? this.props.pet.memories : [] } /> }/>
                 </Switch>
-                <MemoryInput pet={this.props.pet}/><br/>
+                <div>
+                    <MemoryInput pet={this.props.pet}/><br/>
+                </div>
             </div>
         )
     }
