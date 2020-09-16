@@ -18,6 +18,7 @@ const MemoryShow = (props) => {
             <h4>
                 { memory && `${memory.description}` }
             </h4>
+            <hr/>
         </div>
     )
 }
