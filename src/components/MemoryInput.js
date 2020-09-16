@@ -33,7 +33,7 @@ class MemoryInput extends React.Component {
     render() {
         return (
             <div>
-                <h3>Please fill out memory details here: </h3>
+                <h3>Create a memory here: </h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>Title (required): </label>
                     <input type='text' name='title' value={this.state.title} onChange={this.handleChange}/><br/><br/>
