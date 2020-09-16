@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Route, NavLink } from 'react-router-dom'
 import HomeShow from './components/HomeShow'
+import TankieShow from './components/TankieShow'
+import CloudShow from './components/CloudShow'
 import PetsContainer from './containers/PetsContainer'
 import Pets from './components/Pets'
 import PetInput from './components/PetInput'
@@ -24,14 +26,32 @@ class App extends React.Component {
         </div>
 
         <div>
-          <div className='link-menu'>
+          <div className='link-menu' style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-around',
+            }}>
             <NavLink exact activeClassName='active' to='/'>Home</NavLink><br/><br/>
             <NavLink exact activeClassName='active' to='/pets'>My Pets</NavLink><br/><br/>
             <NavLink exact activeClassName='active' to='/pets/new'>Create A Pet</NavLink>
-          </div>
-          {/* <Route path='/' component={HomeShow} /> */}
-          {/* <Route path='/pets' component={Pets} /> */}
-          {/* <Route path='/pets/new' component={PetInput} /> */}
+          </div><br/>
+          {/* <Route path="/" component={TankieShow}/> */}
+        </div>
+        
+        {/* <div style={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                justifyContent: 'space-around',
+            }}>
+          <CloudShow />
+        </div> */}
+
+        <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-around',
+            }}>
+          <TankieShow />
         </div>
         
         <div>
