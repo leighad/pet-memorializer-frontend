@@ -5,7 +5,10 @@ import MemoriesContainer from '../containers/MemoriesContainer'
 
 const PetShow = (props) => {
 
-    let pet = props.pets[props.match.params.id - 1]
+    let petId = parseInt(props.match.params.id)
+    let pet = props.pets.find(pet => pet.id === petId)
+    // let pet = props.pets[props.match.params.id - 1]
+
     console.log('props pets', props.pets)
     console.log('params are', props.match.params)
     console.log('inside pet show', pet)
@@ -20,7 +23,7 @@ const PetShow = (props) => {
                 { pet ? `${pet.name} the ${pet.kind}` : 'There is no pet at this address, please try again.' } 
             </h2>
             <div>
-                <PetDetails pet={pet} /><br/>
+                <PetDetails pet={pet} /><br/><hr/>
                 <MemoriesContainer pet={pet} />
             </div>
         </div>
