@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import Counter from './Counter'
+import Counter from './Counter'
 
 class Memories extends React.Component {
 
@@ -25,7 +25,7 @@ class Memories extends React.Component {
                 ).map(memory => 
                     <li key={memory.id}>
                         <Link to={`/pets/${memory.pet_id}/memories/${memory.id}`}>{memory.title}</Link><br/>
-                        {/* <Counter /> */}
+                        <Counter />
                     </li> )}
             </div>
         )
