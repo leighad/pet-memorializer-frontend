@@ -8,11 +8,11 @@ class Memories extends React.Component {
         searchTerm: ''
     }
 
-    // handleChange = (e) => {
-    //     this.setState({
-    //         searchTerm: e.target.value
-    //     })
-    // }
+    handleChange = (e) => {
+        this.setState({
+            searchTerm: e.target.value
+        })
+    }
 
     render() {
         return (
