@@ -17,8 +17,8 @@ class Memories extends React.Component {
     render() {
         return (
             <div>
-            {/* <label for="search">Search here: </label>
-            <input id="search" type="text" value={this.state.searchTerm} onChange={this.handleChange}/> */}
+            <label for="search">Search here: </label>
+            <input id="search" type="text" value={this.state.searchTerm} onChange={this.handleChange}/>
             <h4>Memories: </h4>
                 {this.props.memories && this.props.memories.filter(
                     (m) => m.title.includes(this.state.searchTerm)
