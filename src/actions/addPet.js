@@ -1,7 +1,6 @@
 export const addPet = (formData) => {
-
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/pets', {
+        return fetch('http://localhost:3000/api/v1/pets', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -10,6 +9,9 @@ export const addPet = (formData) => {
             body: JSON.stringify(formData)
         })
         .then(res => res.json())
-        .then(pet => dispatch({type: 'ADD_PET', payload: pet}))
+        .then(pet => {
+            dispatch({type: 'ADD_PET', payload: pet})
+            return pet
+        })
     }
 }

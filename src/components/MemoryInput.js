@@ -9,7 +9,7 @@ class MemoryInput extends React.Component {
         date: '',
         description: '',
         image: '',
-        favorite: 'no'
+        favorite: false 
     }
 
     handleChange = (event) => {
@@ -26,7 +26,7 @@ class MemoryInput extends React.Component {
             date: '',
             description: '',
             image: '',
-            favorite: 'no'
+            favorite: false 
         })
     }
 
@@ -45,10 +45,11 @@ class MemoryInput extends React.Component {
                     <input type='text' name='image' value={this.state.image} onChange={this.handleChange}/><br/><br/> */}
                     <label>Favorite? </label>
                     {/* <input type='text' name='favorite' value={this.state.favorite} onChange={this.handleChange}/><br/><br/> */}
-                    <input type="checkbox" id="favoriteYes" name="favorite" value={this.state.favorite}/>
+                    {/* <input type="checkbox" id="favoriteYes" name="favorite" value={this.state.favorite}/>
                     <label for="favoriteYes">Yes</label>
                     <input type="checkbox" id="favoriteNo" name="favorite" value={this.state.favorite}/>
-                    <label for="favoriteNo">No</label><br/><br/>                   
+                    <label for="favoriteNo">No</label><br/><br/>                    */}
+                    {/* radio selector or just one checkbox */}
                     <input type='submit'/>
                 </form>
             </div>

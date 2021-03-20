@@ -23,8 +23,12 @@ class PetInput extends React.Component {
     }
 
     handleSubmit = event => {
-        event.preventDefault();
-        this.props.addPet(this.state)
+        event.preventDefault()
+        this.props.addPet(this.state).then(pet => this.props.history.push(`/pets/${pet.id}`))
+        // does not call "addPet", but rather a dispatcher that can dispatch the return value of addPet for you
+        // tries to send the return value of the addPet action creator to the reducer, by passing that return value into dispatch
+        // thunk will check it right before it's passed into the reducer. if it's a function, it will call it and pass in dispatch,
+        // to be used inside that function to manually dispatch an action object to the reducer to update the store
         this.setState({
             name: '', 
             kind: '',
@@ -71,4 +75,8 @@ class PetInput extends React.Component {
     }
 }
 
-export default connect(null, { addPet })(PetInput);
+const connectorFn = connect(null, { addPet })
+
+const componentToBeExported = connectorFn(PetInput);
+
+export default componentToBeExported

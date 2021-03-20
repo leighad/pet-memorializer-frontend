@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import { Route, NavLink } from 'react-router-dom'
 import HomeShow from './components/HomeShow'
 import TankieShow from './components/TankieShow'
-import CloudShow from './components/CloudShow'
+// import CloudShow from './components/CloudShow'
 import PetsContainer from './containers/PetsContainer'
-import Pets from './components/Pets'
-import PetInput from './components/PetInput'
-import MemoriesContainer from './containers/MemoriesContainer';
+// import Pets from './components/Pets'
+// import PetInput from './components/PetInput'
+// import MemoriesContainer from './containers/MemoriesContainer';
 
 // import './App.css';
 
