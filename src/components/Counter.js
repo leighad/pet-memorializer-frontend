@@ -15,7 +15,7 @@ class Counter extends React.Component {
     render() {
         return ( 
             <div>
-                <button onClick={this.handleClick}>Clicks: {this.state.count}</button>
+                <button onClick={this.handleClick}>Likes: {this.state.count}</button>
             </div>
         )
     }
